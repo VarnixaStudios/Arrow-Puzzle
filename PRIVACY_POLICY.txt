@@ -1,0 +1,175 @@
+ARROW PUZZLE - PRIVACY POLICY
+================================
+Effective Date: October 14, 2026
+Version: 1.0.0
+Contact: vatsalp.dev06@gmail.com
+
+--------------------------------------------------------------------------------
+1. OVERVIEW
+--------------------------------------------------------------------------------
+Arrow Puzzle ("the App", "we", "us") is a 100% offline, single-player logic puzzle
+game. We respect your privacy. This policy explains what information the App
+handles, how it is used, and your rights.
+
+**Key promise: The App does not collect, transmit, or share any personal data.
+All data stays on your device.**
+
+--------------------------------------------------------------------------------
+2. DATA WE STORE LOCALLY (ON YOUR DEVICE ONLY)
+--------------------------------------------------------------------------------
+The App uses Android's SharedPreferences (encrypted, app-private storage) to
+persist the following between sessions:
+
+A. App Settings (settings.v1)
+   - Sound on/off
+   - Music on/off (currently unused, reserved)
+   - Haptics on/off
+   - Color-blind mode on/off
+   - Reduce motion on/off
+   - Dot grid visibility on/off
+   - Theme preference (Light / Dark / System)
+   - Language preference (English / Hindi / Gujarati)
+
+B. Game Progress (progress.v1)
+   - Current campaign level reached (1-500)
+   - Hint tokens remaining (0-99)
+   - Stars earned per level (1-3 stars)
+   - Lifetime statistics:
+       * Total levels cleared
+       * Total taps made
+       * Wrong taps (blocked arrow taps)
+       * Flawless wins (cleared with 3 hearts)
+       * No-hint wins (cleared without using a hint)
+       * Hard-tier levels cleared
+       * Daily challenge levels cleared
+       * Best daily streak
+   - Set of completed daily challenge dates (YYYY-MM-DD)
+   - Set of completed monthly challenge months (YYYY-MM)
+
+C. Saved Game State (savedgame.v1)
+   - Current level parameters (seed, size, tier, tag)
+   - IDs of arrows already removed from the board
+   - Hearts remaining (0-3)
+   - Hints used in current session (0+)
+
+D. Onboarding Flag (onboarded.v1)
+   - Whether the How-to-Play tutorial has been completed
+
+**None of the above ever leaves your device.** No server, cloud, or third party
+receives this data.
+
+--------------------------------------------------------------------------------
+3. PERSONAL INFORMATION
+--------------------------------------------------------------------------------
+The App does NOT collect, request, or process any of the following:
+- Name, email, phone number, or account credentials
+- Device identifiers (IMEI, Android ID, advertising ID)
+- Location data (GPS, coarse, or network-based)
+- Contacts, call logs, SMS, or calendar
+- Camera, microphone, or sensor data
+- Biometric data
+- Payment or financial information
+
+--------------------------------------------------------------------------------
+4. NETWORK ACCESS & INTERNET PERMISSION
+--------------------------------------------------------------------------------
+The release build of Arrow Puzzle **does not declare the INTERNET permission**
+in its AndroidManifest.xml. The App cannot and does not make any network
+requests. All game logic, level generation, and asset loading happen entirely
+offline on the device.
+
+The only network-related capability is the optional **in-app update check**
+powered by Google Play Core (in_app_update package). When you open the App,
+Google Play may silently check if a newer version is available. This uses the
+Play Store's existing connection and does not send any personal data to us.
+
+--------------------------------------------------------------------------------
+5. THIRD-PARTY SDKS & LIBRARIES
+--------------------------------------------------------------------------------
+The App bundles only the following runtime dependencies:
+
+- flutter (Google) — UI framework; runs entirely on-device
+- shared_preferences (Flutter team) — local key-value storage on device
+- audioplayers (community) — plays bundled .wav sound files locally
+- in_app_update (Google Play Core) — checks Play Store for app updates
+
+**No analytics SDKs (Firebase Analytics, Google Analytics, Mixpanel, etc.)**
+**No advertising SDKs (AdMob, Unity Ads, ironSource, etc.)**
+**No crash reporting SDKs (Crashlytics, Sentry, etc.)**
+**No social login or sharing SDKs**
+
+--------------------------------------------------------------------------------
+6. CHILDREN'S PRIVACY (COPPA / GDPR-K)
+--------------------------------------------------------------------------------
+The App is suitable for all ages. It does not knowingly collect personal
+information from children under 13 (or the applicable age in your jurisdiction).
+Since no personal data is collected at all, COPPA and GDPR-K obligations are
+trivially satisfied.
+
+--------------------------------------------------------------------------------
+7. YOUR RIGHTS & CONTROL
+--------------------------------------------------------------------------------
+Because all data resides solely on your device, you have full control:
+
+- **View / Modify Settings** → Open Settings screen in the App.
+- **Reset All Progress** → Settings → "Reset Progress" (clears levels, stats,
+  hints, daily history, saved game).
+- **Delete All App Data** → Android Settings → Apps → Arrow Puzzle → Storage →
+  "Clear Storage" (removes everything including settings).
+- **Uninstall** → Removes the App and all its data from your device.
+
+We cannot access, modify, or delete your data on your behalf because we never
+receive it.
+
+--------------------------------------------------------------------------------
+8. DATA RETENTION
+--------------------------------------------------------------------------------
+Local data persists until you explicitly reset it (via the in-app button) or
+uninstall the App. There is no automatic expiration or server-side deletion
+because no server exists.
+
+--------------------------------------------------------------------------------
+9. SECURITY
+--------------------------------------------------------------------------------
+- Data is stored in the app's private SharedPreferences directory, inaccessible
+  to other apps (Android sandbox).
+- No encryption keys are managed by us; Android handles filesystem encryption.
+- The App does not write to external (public) storage.
+
+--------------------------------------------------------------------------------
+10. CHANGES TO THIS POLICY
+--------------------------------------------------------------------------------
+If future versions change data practices (e.g., add cloud sync, analytics, or
+accounts), this policy will be updated and the version number incremented. You
+will be notified in-app before any new data collection begins.
+
+--------------------------------------------------------------------------------
+11. GOOGLE PLAY DATA SAFETY SECTION (FOR PLAY CONSOLE)
+--------------------------------------------------------------------------------
+The following answers reflect the App's behavior for the Play Console "Data
+safety" form:
+
+| Data Type            | Collected? | Purpose           | Shared? |
+|----------------------|------------|-------------------|---------|
+| Personal Info        | No         | —                 | No      |
+| Location             | No         | —                 | No      |
+| Device IDs           | No         | —                 | No      |
+| App Activity         | No         | —                 | No      |
+| App Info/Performance | No         | —                 | No      |
+| In-App Messages      | No         | —                 | No      |
+| Audio Files          | No         | —                 | No      |
+| Photos/Videos        | No         | —                 | No      |
+| Files/Docs           | No         | —                 | No      |
+| **Local Storage**    | **Yes**    | **App functionality** | **No** |
+
+Data collected: **App preferences, game progress, saved game state** — all stored
+**locally only**, **never transmitted**.
+
+--------------------------------------------------------------------------------
+12. CONTACT
+--------------------------------------------------------------------------------
+If you have questions about this policy or your data, email:
+arrowpuzzle.support@example.com
+
+--------------------------------------------------------------------------------
+END OF POLICY
